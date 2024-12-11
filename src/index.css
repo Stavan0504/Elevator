@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  
+.box-main {
+  display: flex
+;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.box-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: auto;
+}
+.box {
+  border: 1px solid rgb(201, 201, 201);
+  height: 50px;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+}
+.numberWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+
+.elevator-icon {
+  position: absolute;
+  transition: transform 1s linear; /* Smooth animation */
+}
+/* Class to animate the elevator when it is moving */
+
+
+/* Button styling */
+.button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button state transitions */
+.button.waiting {
+  background-color: #dc3545; /* Red when waiting */
+}
+
+.button.arrived {
+  background-color: #17a2b8; /* Blue when arrived */
+}
+
+/* Hover effect for buttons */
